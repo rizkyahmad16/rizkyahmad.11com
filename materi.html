@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+  <title>Materi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/materi.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="javascript/java.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<body>
+<header>
+    <b style="text-align: right;">javascript</b> 
+    <a href="index.html"><i class="fas fa-home fa-2x" style= "font-size: 20pt;color: white"></i></a>
+    
+</header>
+
+<div class="w3-sidebar w3-bar-block w3-green w3-card" style="width:250px">
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'quiz')"><a href="soal.html"><div class="grid-item">
+    <i class="fas  	fas fa-file-code fa-1x" style="color: greenyellow;padding:10px 30px;font-size:x-large;"> Start Quiz</i></div></a></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade')"><span class="numbering_bar">1</span><span class="text_sidebar">Pendahuluan</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Left')"><span class="numbering_bar">2</span><span class="text_sidebar">Script Pertama Anda: Menampilkan Baris Teks dengan JavaScript di Halaman Web</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Right')"><span class="numbering_bar">3</span><span class="text_sidebar">Memodifikasi Skrip Pertama Anda</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Top')"><span class="numbering_bar">4</span><span class="text_sidebar">Memperoleh Input Pengguna dengan mengingatkan Dialog</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Bottom')"><span class="numbering_bar">4.1</span><span class="text_sidebar">Halaman Sambutan Dinamis</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom')"><span class="numbering_bar">4.2</span><span class="text_sidebar">Menambahkan Bilangan Bulat</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom2')"><span class="numbering_bar">5</span><span class="text_sidebar">Konsep Memori</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom3')"><span class="numbering_bar">6</span><span class="text_sidebar">Aritmatika</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom4')"><span class="numbering_bar">7</span><span class="text_sidebar">Pengambilan Keputusan: Operator Kesetaraan dan Relasional</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom5')"><span class="numbering_bar">8</span><span class="text_sidebar">Sumber Daya Web</span></button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom6')"><span class="numbering_bar">9</span><span class="text_sidebar">Rangkuman</span></button>
+  <button class="w3-bar-item w3-button tablink"><span class="text_sidebar"></span></button>
+</div>
+
+<div style="margin-left:300px; margin-right: 100px;">
+  <div id="Fade" class="w3-container city" style="display:none">
+    <h2>Pendahuluan</h2>
+   
+    <p style="text-align:justify;">Dalam bab ini, kita memulai pengenalan kita tentang JavaScript1 bahasa skrip, yang
+      digunakan untuk meningkatkan fungsionalitas dan tampilan halaman web.2
+    
+      &nbsp;&nbsp;&nbsp;Dalam Bab 6-11, kami menyajikan diskusi terperinci tentang JavaScript—the secara de
+      facto bahasa skrip sisi klien standar untuk aplikasi berbasis web karena sifatnya yang sangat
+      portabel. Perlakuan kami terhadap JavaScript memiliki dua tujuan—memperkenalkan skrip sisi
+      klien (digunakan dalam Bab 6-18), yang membuat halaman web lebih dinamis dan interaktif,
+      dan menyediakan dasar pemrograman untuk skrip sisi server yang disajikan kemudian dalam
+      buku ini.
+      <br>
+      &nbsp;&nbsp;&nbsp;Sebelum Anda dapat menjalankan contoh kode dengan JavaScript di komputer Anda, Anda mungkin
+      perlu mengubah pengaturan keamanan browser Anda. Secara default, Internet Explorer 9mencegah skrip di
+      komputer lokal Anda agar tidak berjalan, dan menampilkan pesan peringatan. Untuk mengizinkan skrip
+      berjalan dalam file di komputer Anda, pilihpilihan internet dari Peralatan Tidak bisa. Klik
+  <br>
+      &nbsp;&nbsp;&nbsp;Canggih tab dan gulir ke bawah ke Keamanan bagian dari Pengaturan Daftar. Centang kotak
+      berlabel Izinkan konten aktif berjalan dalam file di Komputer Saya. Klikoke dan mulai ulang Internet
+      Penjelajah. Dokumen HTML5 di komputer Anda sendiri yang berisi kode JavaScript sekarang akan
+      berjalan dengan baik. Firefox, Chrome, Opera, Safari (termasuk di iPhone) dan browser Android
+      memiliki JavaScript yang diaktifkan secara default.
+    </p>
+  </div>
+
+  <div id="Left" class="w3-container city" style="display:none">
+    <h2>Script Pertama Anda: Menampilkan Baris Teks dengan JavaScript di Halaman Web</h2>
+    
+    <p style="text-align: justify;">Kita mulai dengan yang sederhana naskah (atau program) yang menampilkan teks "Selamat datang di
+      Pemrograman JavaScript!" dalam dokumen HTML5. Semua browser web utama berisiPenerjemah
+      JavaScript, yang memproses perintah yang ditulis dalam JavaScript. Kode JavaScript dan hasilnya
+      ditunjukkan pada Gambar 6.1.
+      <br>
+        1. Banyak orang bingung antara bahasa scripting JavaScript dengan bahasa pemrograman Java. Java adalah bahasa
+        pemrograman berorientasi objek yang lengkap. &nbsp;&nbsp;&nbsp;Java populer untuk mengembangkan aplikasi perusahaan dan
+        aplikasi web terdistribusi skala besar. JavaScript adalah bahasa scripting berbasis browser yang dikembangkan
+        oleh Netscape dan diimplementasikan di semua browser utama
+      
+      <br>
+        2. JavaScript awalnya dibuat oleh Netscape. Baik Netscape dan Microsoft telah berperan penting
+           dalam standarisasi JavaScript oleh ECMA International—sebelumnya &nbsp;&nbsp;European Computer
+           Asosiasi Produsen—sebagai ECMAScript (www.ecma-international.org/publications/
+           standar/ECMA-262.htm). Versi terbaru JavaScript didasarkan pada ECMAScript 5.
+      </p>
+      
+      <pre>
+  ______________________________________________________________________
+        <strong>&lt;!DOCTYPE html&gt;</strong>> </br>
+        &lt;!-- Fig. 6.1: welcome.html --&gt;
+        &lt;!-- Displaying a line of text. --&gt;
+        <strong>&lt;html&gt;
+          &lt;head&gt; </strong>
+            <strong>&lt;meta charset = </strong> &quot;utf-8&quot;&gt;							
+            <strong>&lt;title</strong>&gt;A First Program in JavaScript<strong>&lt;/title&gt;</strong>
+            <strong>&lt;script type =</strong>&quot;text/javascript&quot;&gt; </br>
+            document.writeln(
+            &quot;&lt;h1&gt;Welcome to JavaScript Programming!&lt;/h1&gt;&quot; ); </br>
+            <strong>&lt;/script&gt;
+          &lt;/head&gt;&lt;body&gt;&lt;/body&gt;
+        &lt;/html&gt;</strong>
+                  </pre>
+                  OUTPUT: <br>
+                  <img src="img/Gambar 6.1.png"><br>
+  ______________________________________________________________________</br>
+  <strong>Gambar 6.1</strong> | Menampilkan sebaris teks.
+
+
+      <p>
+        Baris 11–12 melakukan “pekerjaan nyata” dari naskah, yaitu, menampilkan frasa Selamat datang
+        untuk Pemrograman JavaScript! sebagai h1 judul di halaman web.
+      </p>
+      <p>
+        Baris 6 memulai bagian &lt;head&gt; dokumen. Untuk sementara, kode JavaScript yang kita tulis
+				akan muncul di bagian &lt;head&gt;. Browser menginterpretasikan konten bagian &lt;head&gt; terlebih dahulu,
+				sehingga program JavaScript yang kita tulis di sana dijalankan <i>sebelum</i> &lt;body&gt; dokumen
+				HTML5 ditampilkan. Dalam bab-bab selanjutnya tentang JavaScript, kami mengilustrasikan 
+        <strong>skrip sebaris,</strong> di mana kode JavaScript ditulis dalam &lt;body&gt; dokumen HTML5.
+      </p>
+      <p>
+        <i>Elemen <strong>Skrip</strong> dan Mengomentari Skrip Anda</i>> </br>
+        Baris 9 menggunakan tag <strong>&lt;script&gt;</strong> untuk menunjukkan kepada browser bahwa teks yang mengikutinya adalah
+        bagian dari skrip. Atribut type menentukan jenis skrip MIME serta <strong>bahasa skrip</strong> yang digunakan dalam skrip—dalam
+        hal ini, file teks yang ditulis dalam javascript. Di HTML5, tipe MIME default untuk &lt;script&gt; adalah "text/html",
+        jadi Anda dapat menghilangkan atribut type dari tag &lt;script&gt; Anda. Kami telah memperkenalkan ini di sini, karena
+        Anda akan melihatnya di dokumen HTML lama dengan JavaScript yang disematkan.
+      </p>
+      <p>
+        <i><strong>Senar</strong></i></br>
+				Baris 11–12 menginstruksikan juru bahasa JavaScript browser untuk melakukan suatu tindakan, yaitu, untuk menampilkan
+				di halaman web string karakter yang terdapat di antara tanda kutip ganda (") (juga disebut string literal). Karakter
+				spasi putih individual di antara kata-kata dalam string tidak diabaikan oleh browser. Namun, jika spasi berurutan muncul
+				dalam string, browser memadatkannya menjadi satu spasi. Selain itu, browser mengabaikan <i>karakter spasi putih terkemuka</i>
+				(yaitu, spasi putih di awal string).
+      </p>
+      <p>
+        <i><strong>Menggunakan dokumen Obyek</strong> </i> </br>
+        Baris 11–12 menggunakan browser dokumen <strong>Obyek</strong>, yang mewakili dokumen HTML5 yang sedang
+        ditampilkan browser. Objek ini memungkinkan Anda untuk menentukan teks yang akan ditampilkan
+        dalam dokumen HTML5. Browser membuat sekumpulan objek yang memungkinkan Anda mengakses
+        dan memanipulasisetiap elemen dokumen HTML5. Dalam beberapa bab berikutnya, kami meninjau
+      beberapa objek ini saat kami membahas Model Objek Dokumen (DOM).
+      </p>
+      <p>
+        Objek berada di memori komputer dan berisi informasi yang digunakan oleh skrip.
+        Syarat<strong>obyek</strong> biasanya menyiratkan bahwa <strong>atribut (data)</strong> dan <strong>perilaku (metode)</strong> 
+        berhubungan dengan objek. Metode objek menggunakan atribut untuk melakukan
+        tindakan yang berguna untuk<strong>klien objek</strong>  (yaitu, skrip yang memanggil metode). Suatu
+        metode mungkin memerlukan informasi tambahan <strong>(argumen)</strong> untuk melakukan
+        tindakannya; informasi ini diapit dalam tanda kurung setelah nama metode dalam skrip.
+        Pada baris 11–12, kami menyebutdokumen milik objek tulis <strong>metode</strong> untuk menulis sebaris
+        markup HTML5 dalam dokumen HTML5. Tanda kurung mengikuti nama metodetulis
+        mengandung satu argumen metode itu tulis membutuhkan (dalam hal ini, string HTML5
+        yang akan ditampilkan browser). metodetulis menginstruksikan browser untuk menulis
+        string argumen ke halaman web untuk rendering. Jika string berisi elemen HTML5,
+        browser menafsirkan elemen ini dan menampilkannya di layar. Dalam contoh ini, browser
+        menampilkan frasaSelamat datang di Pemrograman JavaScript! sebagai h1-tajuk HTML5 tingkat,
+        karena frasa tersebut diapit dengan h1 elemen.
+      </p>
+      <p>
+        <i><strong>Pernyataan</strong> </i> </br>
+        Elemen kode pada baris 11–12, termasuk document.writeln, argumennya dalam tanda kurung
+        string) dan <strong>titik koma</strong> (;), bersama-sama disebut <strong>penyataan</strong>. Setiap pernyataan diakhiri
+        dengan titik koma (juga dikenal sebagai <strong>terminator pernyataan</strong>)—meskipun praktik ini adalah
+        bukan diperlukan oleh JavaScript, ini direkomendasikan sebagai cara untuk menghindari
+        masalah halus. Baris 14 menunjukkan akhir skrip. Di baris 15, tag dan tentukan
+        bahwa dokumen HTML5 ini memiliki badan kosong.
+      </p>
+      <p>
+        <i><strong>Catatan Tentang</strong> </i>document.writeln </br>
+        Dalam contoh ini, kami menampilkan h1 Elemen HTML5 di browser web dengan menggunakan
+        document.writeln untuk menulis elemen ke dalam halaman web. Untuk penyederhanaan dalam Bab 6–
+        9, kami akan terus melakukan ini karena kami fokus pada penyajian konsep dasar pemrograman
+        JavaScript. Biasanya, Anda akan menampilkan konten dengan memodifikasi elemen yang ada di
+        halaman web—teknik yang akan kita mulai gunakan di Bab 10.
+      </p>            
+      <p>
+         <i><strong>Catatan Tentang Menyematkan Kode JavaScript ke dalam Dokumen HTML5</strong> </i> </br>
+        Di Bagian 4.5, kami membahas manfaat menempatkan kode CSS3 di lembar gaya eksternal dan
+        menautkannya ke dokumen HTML5 Anda. Untuk alasan yang sama, kode JavaScript biasanya ditempatkan
+        dalam file terpisah, kemudian disertakan dalam dokumen HTML5 yang menggunakan skrip. Hal ini membuat
+        kode lebih dapat digunakan kembali, karena dapat dimasukkan ke dalam dokumen HTML5 apa pun—seperti
+        halnya dengan banyak pustaka JavaScript yang digunakan dalam pengembangan web profesional saat ini.
+        Kita akan mulai memisahkan CSS3 dan JavaScript menjadi file terpisah mulai dari Bab 10.
+      </p>
+   
+</div>
+
+  <div id="Right" class="w3-container city" style="display:none">
+    <h2>Memodifikasi Skrip Pertama Anda</h2>
+   
+    <p style="text-align: justify;">Bagian ini melanjutkan pengenalan kita pada pemrograman JavaScript dengan dua contoh yang
+      memodifikasi contoh pada Gambar 6.1.
+      <>
+        <h5>
+            <i><strong>Menampilkan Baris Teks Berwarna</strong> </i>
+        </h5>
+        &nbsp;&nbsp;&nbsp;Sebuah skrip dapat menampilkan Selamat datang di Pemrograman JavaScript! dalam banyak hal. Gambar 6.2 menampilkan teks
+        dalam magenta, menggunakan CSSwarna Properti. Sebagian besar contoh ini identik dengan Gambar 6.1, jadi kami
+        hanya berkonsentrasi pada baris 11-13 dari Gambar 6.2, yang menampilkan satu baris teks dalam dokumen.
+        Pernyataan pertama menggunakandokumen metode menulis untuk menampilkan string. Tidak seperti
+        tulis, menulis tidak memposisikan kursor keluaran dalam dokumen HTML5 di awal baris
+        berikutnya setelah menulis argumennya. [Catatan: Kursor keluaran melacak di mana karakter
+        berikutnya muncul di markup dokumen, bukan di mana karakter berikutnya muncul di halaman
+        web seperti yang dirender oleh browser.] Karakter berikutnya yang ditulis dalam dokumen
+        muncul segera setelah karakter terakhir ditulis dengan menulis. Jadi, ketika baris 12–13
+        dieksekusi, karakter pertama tertulis, “W,” muncul segera setelah karakter terakhir ditampilkan
+      </p>
+      <p>
+        _____________________________________________________________________
+        <pre>
+          <strong>&lt;!DOCTYPE html&gt;</strong>
+        
+          &lt;!-- Fig. 6.2: welcome2.html --&gt;
+          &lt;!-- Printing one line with multiple statements. --&gt;
+          <strong>&lt;html&gt;
+            &lt;head&gt;
+              &lt;meta charset =</strong> &quot;utf-8&quot;&gt;
+              <strong>&lt;title&gt;</strong>Printing a Line with Multiple Statements<strong>&lt;/title&gt;</strong>
+              <strong>&lt;script type =</strong> &quot;text/javascript&quot;&gt;
+                &lt;!--
+                document.write( &quot;&lt;h1 style = ’color: magenta’&gt;&quot; );
+                document.write( &quot;Welcome to JavaScript &quot; +
+                  &quot;Programming!&lt;/h1&gt;&quot; );
+                // --&gt;
+              <strong>&lt;/script&gt;
+            &lt;/head&gt;&lt;body&gt;&lt;/body&gt;
+          &lt;/html&gt;</strong>
+                      </pre>
+
+                      OUTPUT: <br>
+                      <img src="img/Gambar 6.2.png"><br>
+          _____________________________________________________________________</br>
+          <strong>Gambar 6.2</strong> | Mencetak satu baris dengan pernyataan terpisah.
+      </p>
+      <p>
+        dengan menulis (NS > karakter di dalam tanda kutip ganda kanan pada baris 11). Setiapmenulis atau tulis
+        pernyataan melanjutkan menulis karakter di mana yang terakhir menulis atau tulis pernyataan berhenti
+        menulis karakter. Jadi, setelahtulis pernyataan, output berikutnya muncul di awal baris berikutnya. Jadi,
+        dua pernyataan pada baris 11–13 menghasilkan satu baris teks HTML5. Ingat bahwa pernyataan
+        dalam JavaScript dipisahkan oleh titik koma (;). Oleh karena itu, baris 12-13 hanya mewakili satu
+        pernyataan lengkap. JavaScript memungkinkan pernyataan besar untuk dibagi menjadi banyak baris.
+        NS+ operator (disebut "operator penggabungan" bila digunakan dengan cara ini) pada baris 12
+        menggabungkan dua string bersama-sama—ini akan dijelaskan lebih rinci nanti dalam bab ini.
+      </p>
+      <p>
+        &nbsp;&nbsp;&nbsp;Diskusi sebelumnya tidak ada hubungannya dengan yang sebenarnya rendering dari teks
+        HTML5. Ingat bahwa browser melakukannyabukan buat baris teks baru kecuali jendela browser
+        terlalu sempit untuk teks yang sedang dirender atau browser menemukan elemen HTML5 yang
+        secara eksplisit memulai baris baru—misalnya, untuk memulai paragraf baru.
+      </p>
+      <p>
+      <i><strong>Tanda Kutip Bersarang</strong> </i> </br>
+      Ingat bahwa string dapat dibatasi oleh satu (') atau ganda (") karakter kutipan. Dalam sebuah string, Anda tidak dapat
+      membuat sarang kutipan dari jenis yang sama, tetapi Anda dapat membuat sarang kutipan dari jenis lainnya. String
+      yang dibatasi oleh tanda kutip ganda, dapat berisi tanda kutip tunggal. Demikian pula. string yang dibatasi oleh
+      tanda kutip tunggal, dapat berisi tanda kutip ganda bersarang. Baris 11 menyarangkan tanda kutip tunggal di dalam
+      string tanda kutip ganda untuk mengutipgaya nilai atribut dalam h1 elemen.  
+      </p>
+      <p>
+      <i><strong>Menampilkan Teks dalam Dialog Peringatan</strong> </i> </br>
+      Dua skrip pertama dalam bab ini menampilkan teks dalam dokumen HTML5. Terkadang berguna untuk
+      menampilkan informasi di windows yang disebutdialog (atau kotak dialog) yang “muncul” di layar untuk
+      menarik perhatian pengguna. Dialog biasanya menampilkan pesan penting kepada pengguna yang
+      menjelajahi halaman web. JavaScript memungkinkan Anda dengan mudah menampilkan kotak dialog yang
+      berisi pesan. Script pada Gambar 6.3 menampilkanSelamat datang di Pemrograman JavaScript! sebagai tiga baris dalam
+      dialog yang telah ditentukan sebelumnya yang disebut an peringatan dialog.
+      </p>
+   <p>
+    _______________________________________________________________________
+    <pre>
+      <strong>&lt;!DOCTYPE html&gt;</strong>
+    
+      &lt;!-- Fig. 6.3: welcome3.html --&gt;
+      &lt;!-- Alert dialog displaying multiple lines. --&gt;
+      <strong>&lt;html&gt;
+        &lt;head&gt;
+          &lt;meta charset =</strong> &quot;utf-8&quot;&gt;
+          <strong>&lt;title&gt;</strong>Printing Multiple Lines in a Dialog Box<strong>&lt;/title&gt;
+          &lt;script type = </strong>&quot;text/javascript&quot;&gt;
+            &lt;!--
+              window.alert( &quot;Welcome to\nJavaScript\nProgramming!&quot; );
+            // --&gt;
+          <strong>&lt;/script&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;p&gt;</strong>Click Refresh (or Reload) to run this script again.<strong>&lt;/p&gt;
+        &lt;/body&gt;
+      &lt;/html&gt;</strong>
+    </pre>
+
+    OUTPUT: <br>
+    <img src="img/Gambar 6.3.png"><br>
+    _______________________________________________________________________</br>
+    <strong>Gambar 6.3</strong> | Dialog peringatan menampilkan beberapa baris.
+   </p>
+   <p>
+    <strong>NS</strong> jendela <strong>Obyek</strong> </br>
+    Baris 11 dalam skrip menggunakan browser jendela objek untuk menampilkan dialog peringatan. Argumen
+    untukjendela milik objek peringatan metode adalah string untuk ditampilkan. Mengeksekusi pernyataan
+    sebelumnya menampilkan dialog yang ditunjukkan pada Gambar 6.3. NS <strong>bar judul</strong> dialog Chrome ini berisi
+    string Peringatan JavaScript untuk menunjukkan bahwa browser sedang menyajikan pesan kepada pengguna.
+    Dialog tersebut memberikanoke tombol yang memungkinkan pengguna untuk <strong>memberhentikan</strong> (yaitu,
+    <strong>Menutup</strong>) dialog dengan mengklik tombol. Untuk menutup dialog, posisikan <strong>kursor mouse</strong> (disebut juga NS <strong>penunjuk mouse</strong>) di atas oke dan klik mouse, atau cukup tekan tombol Memasuki kunci. Isi dialog
+    bervariasi menurut browser. Anda dapat menyegarkan halaman untuk menjalankan skrip lagi.
+   </p>
+   <p>
+    <i><strong>Urutan melarikan diri </strong> </i> </br>
+    NS peringatan dialog dalam contoh ini berisi tiga baris teks biasa. Biasanya, dialog menampilkan
+    karakter string persis seperti yang muncul. Namun, dialog tidak menampilkan karakter\n (baris 11). NS
+    <strong>garis miring terbalik</strong> (\) dalam sebuah string adalah <strong>karakter pelarian</strong>. Ini menunjukkan bahwa
+    karakter "khusus" akan digunakan dalam string. Ketika garis miring terbalik ditemukan dalam sebuah
+    string, karakter berikutnya digabungkan dengan garis miring terbalik untuk membentuk sebuah
+    <strong>Urutan pelarian</strong> urutan pelarian. \n adalah <strong>karakter baris baru</strong> , yang menyebabkan <strong>kursor</strong> (yaitu,
+    indikator posisi layar saat ini) untuk pindah ke awal lanjut baris dalam dialog. Beberapa urutan escape
+    JavaScript umum lainnya tercantum pada Gambar 6.4. NS\n dan \T urutan escape dalam tabel tidak
+    memengaruhi rendering HTML5 kecuali jika berada di a <strong>praelemen</strong> (elemen ini menampilkan teks di
+    antara tagnya dalam font lebar tetap persis seperti yang diformat di antara tag, termasuk karakter
+    spasi putih utama dan karakter spasi putih berurutan).
+   </p>
+   <p>
+    <table>
+      <tr>
+        <th rowspan="1">Escape sequence </th>
+        <th colspan="1">Description</th>
+      </tr>
+      <tr>
+        <td>\n</td>
+        <td><i>New line</i>>—position the screen cursor at the beginning of the next line.</td>
+      </tr>
+      <tr>
+        <td>\t</td>
+        <td><i>Horizontal tab</i>—move the screen cursor to the next tab stop.</td>
+      </tr>
+      <tr>
+        <td>\\</td>
+        <td><i>Backslash</i>—used to represent a backslash character in a string.</td>
+      </tr>
+      <tr>
+        <td>\"</td>
+        <td><i>Double quote</i>—used to represent a double-quote character in a string
+          contained in double quotes. For example,
+          window.alert( "\"in double quotes\"" );
+          displays "in double quotes" in an alert dialog.</td>
+      </tr>
+      <tr>
+        <td>\'</td>
+        <td><i>Single quote</i>—used to represent a single-quote character in a string. For
+          example,
+          window.alert( '\'in single quotes\'' );
+          displays 'in single quotes' in an alert dialog</td>
+      </tr>
+    </table>
+    <strong>Gambar 6.4</strong> | Beberapa urutan pelarian umum.
+   </p>
+
+  </div>
+
+  <div id="Top" class="w3-container city" style="display:none">
+    <h2><strong>Memperoleh Input Pengguna dengan</strong> mengingatkan <strong>Dialog</strong></h2>
+    
+    <p style="text-align: justify;">Scripting memberi Anda kemampuan untuk menghasilkan sebagian atau seluruh konten halaman web pada saat itu
+      ditampilkan kepada pengguna. Sebuah skrip dapat mengadaptasi konten berdasarkan input dari pengguna atau
+      variabel lain, seperti waktu atau jenis browser yang digunakan oleh klien. Halaman web seperti itu dikatakandinamis,
+      sebagai lawan statis, karena kontennya memiliki kemampuan untuk berubah. Dua subbagian berikutnya
+      menggunakan skrip untuk mendemonstrasikan halaman web dinamis.</p>
+  </div>
+
+  <div id="Bottom" class="w3-container city" style="display:none">
+    <h2> <strong>Halaman Sambutan Dinamis</strong></h2>
+   
+    <p style="text-align: justify;">Skrip kami berikutnya membuat halaman sambutan dinamis yang memperoleh nama pengguna, lalu menampilkannya di
+      halaman. Skrip menggunakan yang lainsudah ditentukan sebelumnya kotak dialog dari jendela objek—a
+      mengingatkan dialog—yang memungkinkan pengguna memasukkan nilai yang dapat digunakan skrip. Naskah meminta pengguna untuk memasukkan nama, kemudian menampilkan nama dalam dokumen HTML5.
+      Gambar 6.5 menyajikan skrip dan contoh output. Di bab selanjutnya, kita akan mendapatkan input melalui
+      komponen GUI dalam bentuk HTML5, seperti yang diperkenalkan di Bab 2–3.]</p>
+     
+      <img src="img/Gambar 6.5.png"><br>
+    
+      <p>
+        <i><strong>Deklarasi, Kata Kunci dan Variabel</strong></i><br>
+        Baris 11 adalah <strong>pernyataan</strong> yang berisi JavaScript <strong>kata kunci</strong> var. Kata kunci adalah kata-kata
+        yang memiliki arti khusus dalam JavaScript. Kata kuncinyavar di awal pernyataan menunjukkan
+        bahwa kata nama adalah <strong>variabel</strong>. Variabel adalah lokasi di memori komputer di mana nilai
+        dapat disimpan untuk digunakan oleh skrip. Semua variabel memilikinama dan nilai, dan harus
+        dideklarasikan dengan var pernyataan sebelum digunakan dalam skrip
+      </p>
+      <p>
+       <i><strong>Pengidentifikasi dan Sensitivitas Huruf</strong></i><br>
+        Nama variabel dapat berupa apa saja yang valid <strong>pengenal</strong>. Identifier adalah serangkaian karakter yang terdiri dari
+        huruf, angka, garis bawah (_) dan tanda dolar ($) itu bukan dimulai dengan angka dan adalah bukan kata kunci
+        JavaScript yang dicadangkan. [Catatan: Daftar lengkap kata kunci yang dipesan dapat ditemukan pada Gambar. 7.2.]
+        Pengidentifikasi mungkin bukan mengandung spasi. Beberapa pengidentifikasi yang valid adalahSelamat datang,
+        $nilai, _nilai, m_inputField1 dan tombol7. Nama7 tombol bukan pengenal yang valid,
+        karena dimulai dengan angka, dan nama bidang masukan tidak valid, karena mengandung spasi.
+        Ingat bahwa JavaScript adalah <strong>hal - hal sensitif—</strong>huruf besar dan kecil dianggap sebagai
+        karakter yang berbeda, jadi nama, Nama dan NAMA adalah pengenal yang berbeda
+      </p>
+      <p>
+        Deklarasi diakhiri dengan titik koma dan dapat dibagi menjadi beberapa baris dengan setiap variabel
+        dalam deklarasi dipisahkan oleh a koma—dikenal sebagai <strong>daftar yang dipisahkan koma</strong> dari nama variabel.
+        Beberapa variabel dapat dideklarasikan baik dalam satu atau dalam beberapa deklarasi.
+      </p>
+      <p>
+       <i><strong>Komentar JavaScript</i></strong><br>
+        Sangat membantu untuk menunjukkan tujuan setiap variabel dalam skrip dengan
+        menempatkan komentar JavaScript di akhir setiap baris dalam deklarasi. Pada baris 11,
+        <strong>komentar satu baris</strong> yang dimulai dengan karakter // menyatakan tujuan variabel dalam skrip.
+        Bentuk komentar ini disebut komentar satu baris karena berakhir di akhir baris di mana
+        komentar itu muncul. A// komentar dapat dimulai pada posisi mana pun dalam satu baris kode
+        JavaScript dan berlanjut hingga akhir baris. Komentar tidak menyebabkan browser melakukan
+        tindakan apa pun saat skrip ditafsirkan; lebih tepatnya, komentar adalahdiabaikan oleh
+        penerjemah JavaScript.
+      </p>
+      <p>
+        <i><strong>Komentar Multiline</i></strong><br>
+        Anda juga bisa menulis <strong>komentar multibaris.</strong> Sebagai contoh<br>
+
+        /* Ini adalah multiline<br>
+        komentar. Itu dapat dibagi<br>
+        menjadi banyak baris. */<br>
+        adalah komentar multiline yang tersebar di beberapa baris. Komentar semacam itu dimulai dengan pembatas
+        /* dan diakhiri dengan pembatas */. Semua teks di antara pembatas komentar adalahdiabaikan
+        oleh penerjemah.
+      </p>
+      <p>
+        &nbsp;&nbsp;&nbsp;JavaScript mengadopsi komentar yang dibatasi dengan /* dan */ dari bahasa pemrograman C
+        dan komentar satu baris yang dibatasi dengan // dari bahasa pemrograman C++. Pemrogram
+        JavaScript umumnya lebih menyukai komentar satu baris gaya C++ daripada komentar gaya C.
+        Sepanjang buku ini, kami menggunakan komentar satu baris bergaya C++.
+      </p>
+      <p>
+        <i>jendela <strong>objek</strong> mengingatkan <strong>metode</strong></i><br>
+        Baris 13 adalah komentar yang menunjukkan tujuan pernyataan pada baris berikutnya. Jalur 14 memanggil
+        jendela milik objek mengingatkan metode, yang menampilkan dialog pada Gambar 6.6. Dialog memungkinkan
+        pengguna untuk memasukkan string yang mewakili nama pengguna.
+      </p>
+
+        <img src="img/gambar 6.6.png"><br>
+
+      <p>
+        &nbsp;&nbsp;&nbsp;Argumen untuk mengingatkan menentukan pesan yang memberi tahu pengguna apa yang harus diketik
+        di bidang teks. Pesan ini disebutmengingatkan karena mengarahkan pengguna untuk melakukan tindakan
+        tertentu. Argumen kedua opsional, dipisahkan dari yang pertama dengan koma, dapat menentukan string
+        default yang ditampilkan di bidang teks; kode kami tidak menyediakan argumen kedua. Dalam hal ini,
+        sebagian besar browser membiarkan bidang teks kosong, dan Internet Explorer menampilkan nilai default
+        tidak terdefinisi. Pengguna mengetik karakter di kolom teks, lalu mengklik tomboloke
+        tombol untuk mengirimkan string ke skrip. Kami biasanya menerima masukan dari pengguna melalui
+        komponen GUI seperti:mengingatkan dialog, seperti dalam skrip ini, atau melalui komponen GUI bentuk
+        HTML5, seperti yang akan kita lihat di bab selanjutnya.<br>
+        &nbsp;&nbsp;&nbsp;Pengguna dapat mengetik apa saja di bidang teks dari mengingatkan dialog. Untuk skrip ini, apa pun yang
+        dimasukkan pengguna dianggap sebagai nama. Jika pengguna mengklikMembatalkan tombol, tidak ada nilai
+        string yang dikirim ke skrip. Sebagai gantinya,mengingatkan dialog mengirimkan nilai batal, kata kunci JavaScript
+        yang menandakan bahwa variabel tidak memiliki nilai. Perhatikan bahwabatal bukan literal string, melainkan
+        istilah yang telah ditentukan sebelumnya yang menunjukkan tidak adanya nilai. Menulis abatal nilai ke
+        dokumen, bagaimanapun, menampilkan kata batal di halaman web    
+      </p>
+      <p>
+        <i><strong>Operator Penugasan</strong></i><br>
+        Pernyataan pada baris 14 menugaskan nilai yang dikembalikan oleh jendela milik objek mengingatkan
+        metode (string berisi karakter yang diketik oleh pengguna—atau nilai default atau batal jika Membatalkan
+        tombol diklik) ke variabel nama dengan menggunakan <strong>operator penugasan,</strong> =. Pernyataan itu dibaca
+        sebagai, "nama mendapatkan nilai yang dikembalikan oleh window.prompt("Silakan masukkan nama Anda").” NS=
+        operator disebut <strong>operator biner</strong> karena memiliki dua <strong>operan—</strong>nama dan hasil dari
+        ekspresi window.prompt("Silakan masukkan nama Anda"). Keseluruhan pernyataan ini disebut an
+        <strong>penugasan</strong> karena memberikan nilai pada variabel. Ekspresi di sebelah kanan operator
+        penugasan selalu dievaluasipertama.
+      </p>
+      <p>
+        <i><strong>Penggabungan String</i></strong><br>
+        Baris 16–17 digunakan document.writeln untuk menampilkan pesan selamat datang baru. Ekspresi
+        di dalam tanda kurung menggunakan operator+ untuk "menambahkan" string (harfiah "Halo,
+        "), variabel nama (string yang dimasukkan pengguna di baris 14) dan string lain (literal ",
+        selamat datang di pemrograman JavaScript!"). JavaScript memiliki versi+ operator
+        untuk rangkaian string yang memungkinkan string dan nilai tipe data lain (termasuk string
+        lain) untuk digabungkan. Hasil dari operasi ini adalah string baru (dan biasanya lebih panjang).
+        Jika kita berasumsi bahwanama berisi string literal "Jim", ekspresi mengevaluasi sebagai berikut:
+        JavaScript menentukan bahwa dua operan yang pertama + operator (string
+        "Halo," dan nilai variabel nama) keduanya adalah string, lalu menggabungkan keduanya
+        menjadi satu string. Selanjutnya, JavaScript menentukan bahwa dua operan dari operator
+        + kedua (hasil dari operasi penggabungan pertama, string" Halo, Jim", dan
+        rangkaian ", selamat datang di pemrograman JavaScript!") keduanya adalah string dan
+        menggabungkan keduanya. Ini menghasilkan string" Halo, Jim, selamat datang di program JavaScriptming!". Browser merender string ini sebagai bagian dari dokumen HTML5. Perhatikan 
+        bahwa ruang antaraHalo, dan Jim adalah bagian dari string "Halo, ".<br>
+        <hr>&nbsp;&nbsp;&nbsp;Seperti yang akan Anda lihat nanti, operator + yang digunakan untuk penggabungan string dapat
+        mengonversi tipe variabel lain menjadi string jika perlu. Karena penggabungan string terjadi di antara dua
+        string, JavaScript harus mengonversi tipe variabel lain menjadi string sebelum dapat melanjutkan operasi.
+        Misalnya, jika variabelusia memiliki nilai bilangan bulat sama dengan 21, maka ekspresi
+        "usiaku adalah" + umur mengevaluasi ke string "umur saya 21". JavaScript mengonversi nilai
+        usia ke string dan menggabungkannya dengan string literal yang ada "umurku adalah ".<br>
+        <hr>&nbsp;&nbsp;&nbsp;Setelah browser menafsirkan (kepala) bagian dari dokumen HTML5 (yang berisi JavaScript),
+        kemudian menafsirkan (tubuh) dari dokumen HTML5 (yang kosong; baris 20) dan merender file
+        HTML5. Halaman HTML5 adalahbukan diberikan sampai prompt diberhentikan karena prompt
+        menghentikan eksekusi di kepala, sebelum tubuh sedang diproses. Jika Anda memuat ulang
+        halaman setelah memasukkan nama, browser akan menjalankan skrip lagi sehingga Anda
+        dapat mengubah namanya.
+      </p>
+  </div>
+
+  <div id="Zoom" class="w3-container city" style="display:none">
+    <h2>Menambahkan Bilangan Bulat</h2>
+    
+    <p style="text-align: justify;">Skrip kami berikutnya mengilustrasikan penggunaan lain dari mengingatkan dialog untuk mendapatkan masukan dari
+      pengguna. Gambar 6.7 memasukkan duabilangan bulat (bilangan bulat, seperti 7, –11, 0 dan 31914) yang diketik oleh
+      pengguna di keyboard, menghitung jumlah nilai dan menampilkan hasilnya.</p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Baris 11–15 mendeklarasikan variabel nomor pertama, nomor kedua, nomor 1, nomor 2
+      dan jumlah. Komentar satu baris menyatakan tujuan dari masing-masing variabel ini. Baris 18 mempekerjakan a
+      mengingatkan dialog untuk memungkinkan pengguna memasukkan string yang mewakili yang pertama dari dua
+      bilangan bulat yang akan ditambahkan. Script memberikan nilai pertama yang dimasukkan oleh pengguna ke variabel 
+      mampu nomor pertama. Baris 21 menampilkan amengingatkan dialog untuk mendapatkan nomor kedua untuk
+      menambah dan memberikan nilai ini ke variabel nomor kedua. 
+
+     <br> <img src="img/gambar 6.7.1.png">
+     <img src="img/gambar 6.7.2.png">
+     <img src="img/gambar 6.7.3.png">
+
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Seperti pada contoh sebelumnya, pengguna dapat mengetik apa saja di mengingatkan dialog. Untuk skrip
+      ini, jika pengguna mengetikkan nilai bukan bilangan bulat atau mengklik tombol Membatalkan tombol,
+      kesalahan logika akan terjadi, dan jumlah dari dua nilai akan muncul di dokumen HTML5 sebagai NaN
+      (arti <strong>bukan angka</strong>). Kesalahan logika disebabkan oleh kode yang benar secara sintaksis yang
+      menghasilkan hasil yang salah. Dalam Bab 11, kita membahasNomor objek dan metodenya yang dapat
+      menentukan apakah suatu nilai adalah bilangan.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Ingat itu mengingatkan dialog kembali ke skrip sebagai string nilai yang diketik oleh pengguna.
+      Baris 24-25 mengubah dua input string oleh pengguna menjadi nilai integer yang dapat digunakan
+      dalam perhitungan. FungsiparseInt mengonversi argumen string menjadi integer. Baris 24 ditetapkan
+      ke variabelnomor 1 bilangan bulat yang berfungsi parseInt kembali. Demikian pula, baris 25 memberikan
+      nilai integer ke variabelnomor 2. Referensi selanjutnya untuknomor 1 dan
+      nomor 2 dalam skrip gunakan nilai integer ini. Kami merujuk keparseInt sebagai fungsi daripada
+      metode karena kami tidak mendahului pemanggilan <strong>fungsi</strong> dengan nama objek (seperti
+      dokumen atau jendela) dan titik (.). Istilah metode berarti bahwa fungsi tersebut
+      milik objek tertentu. Misalnya, metodetulis milik dokumen objek dan metode
+      mengingatkan milik jendela obyek.
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Baris 27 menghitung jumlah variabel nomor 1 dan nomor 2 menggunakan <strong>operator tambahan,</strong> +,
+      dan memberikan hasilnya ke variabel jumlah dengan menggunakan operator penugasan, =. Perhatikan
+      bahwa+ operator dapat melakukan penjumlahan dan penggabungan string. Dalam hal ini,+ operator
+      melakukan penjumlahan, karena keduanya operand berisi bilangan bulat. Setelah baris 27 melakukan
+      perhitungan ini, baris 30 menggunakandocument.writeln untuk menampilkan hasil penambahan pada
+      halaman web.  
+    </p>
+    <p>
+      <i><strong>Memvalidasi JavaScript</strong></i><br>
+      Seperti yang dibahas dalam Kata Pengantar, kami memvalidasi kode kami menggunakan alat validasi HTML5, CSS3
+      dan JavaScript. Browser umumnya pemaaf dan biasanya tidak menampilkan pesan kesalahan kepada pengguna.
+      Sebagai seorang programmer, Anda harus benar-benar menguji halaman web Anda dan memvalidasinya. Alat
+      validasi melaporkan dua jenis pesan—kesalahan dan peringatan. Biasanya, Anda harus mengatasi kesalahan; jika
+      tidak, halaman web Anda mungkin tidak akan ditampilkan atau dijalankan dengan benar.
+      Halaman dengan peringatan biasanya ditampilkan dan dijalankan dengan benar; namun, beberapa organisasi
+      memiliki protokol ketat yang menunjukkan bahwa semua halaman harus bebas dari peringatan dan kesalahan
+      sebelum dapat diposting di situs web langsung.
+      <br>Saat Anda memvalidasi contoh ini di www.javascriptlint.com, baris 24-25 menghasilkan
+      pesan peringatan:
+      <br>parseInt kehilangan parameter radix
+    </p>
+    <p>
+      Fungsi parseInt memiliki parameter kedua opsional, yang dikenal sebagai akar, yang menentukan sistem bilangan
+      dasar yang digunakan untuk menguraikan bilangan (misalnya, 8 untuk oktal, 10 untuk desimal, dan 16 untuk
+      heksadesimal). Standarnya adalah basis 10, tetapi Anda dapat menentukan basis apa pun dari 2 hingga
+      32. Misalnya, pernyataan berikut menunjukkan bahwa: nomor pertama harus diperlakukan sebagai
+      bilangan bulat desimal (basis 10):
+      <br>angka1 = parseInt(Angka pertama, 10 ); <br>
+      Ini mencegah angka dalam format lain seperti oktal (basis 8) dikonversi ke nilai yang
+      salah.
+    </p>
+
+  </div>
+  <div id="Zoom2" class="w3-container city" style="display:none">
+    <h2>Konsep Memori</h2>
+    
+    <p style="text-align: justify;">Nama-nama variabel seperti nomor 1, nomor 2 dan jumlah sebenarnya sesuai dengan <strong>lokasi</strong> dalam
+      memori komputer. Setiap variabel memiliki <strong>nama,</strong> A <strong>Tipe</strong> dan <strong>nilai.</strong></p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Dalam skrip tambahan pada Gambar. 6.7, ketika baris 24 dijalankan, string nomor pertama (
+      sebelumnya dimasukkan oleh pengguna di a mengingatkan dialog) diubah menjadi bilangan bulat
+      dan ditempatkan ke lokasi memori yang namanya nomor 1 telah ditetapkan oleh penerjemah.
+      Misalkan pengguna memasukkan string45 sebagai nilai untuk nomor pertama. Skrip berubah
+      nomor pertama ke bilangan bulat, dan komputer menempatkan nilai bilangan bulat 45 ke lokasi
+      nomor 1, seperti yang ditunjukkan pada Gambar. 6.8. Setiap kali nilai ditempatkan di lokasi memori, nilai
+      menggantikan nilai sebelumnya di lokasi itu. Nilai sebelumnya hilang.
+      
+      <img src="img/gambar 6.8.png">
+
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Misalkan pengguna memasukkan 72 sebagai bilangan bulat kedua. Saat baris 25 dijalankan, skrip
+      mengonversinomor kedua ke bilangan bulat dan menempatkan nilai bilangan bulat itu, 72, ke lokasi
+      nomor 2; maka muncul memori seperti pada Gambar 6.9.
+
+     <br> <img src="img/gambar 6.9.png">
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Setelah skrip mendapatkan nilai untuk nomor 1 dan nomor 2, itu menambahkan nilai dan
+      menempatkan jumlah ke dalam variabel jumlah. Pernyataan<br>
+      "jumlah = angka1 + angka2;"
+      <br> melakukan penambahan dan juga menggantikan jumlahnilai sebelumnya. Setelahjumlah dihitung,
+      memori muncul seperti yang ditunjukkan pada Gambar. 6.10. Perhatikan bahwa nilainomor 1 dan nomor 2
+      muncul persis seperti yang mereka lakukan sebelum digunakan dalam perhitungan jumlah. Nilai-nilai
+      ini digunakan, tetapi tidak dimusnahkan, ketika komputer melakukan perhitungan—ketika suatu nilai
+      dibaca dari lokasi memori, prosesnyatidak merusak.
+      <br> <img src="img/gambar 6.10.png">
+    </p>
+    <p>
+      <i><strong>Tipe Data dalam JavaScript</strong></i><br>
+      Tidak seperti bahasa pendahulunya C, C++ dan Java, JavaScript tidak memerlukan variabel untuk memiliki tipe yang
+      dideklarasikan sebelum dapat digunakan dalam skrip. Variabel dalam JavaScript dapat berisi nilaisetiap tipe data, dan
+      dalam banyak situasi JavaScript secara otomatis mengkonversi antara nilai dari tipe yang berbeda untuk Anda. Untuk
+      alasan ini, JavaScript disebut sebagai <strong>bahasa yang diketik dengan longgar.</strong> Ketika sebuah variabel dideklarasikan
+      dalam JavaScript, tetapi tidak diberi nilai, variabel tersebut memiliki <strong>tidak terdefinisi</strong> nilai. Mencoba menggunakan
+      nilai variabel seperti itu biasanya merupakan kesalahan logika.
+      <br> Ketika variabel dideklarasikan, mereka tidak diberi nilai kecuali Anda menentukannya.
+      Menetapkan nilaibatal ke variabel menunjukkan bahwa itu tidak bukan mengandung suatu nilai 
+    </p>
+    </div>
+
+  <div id="Zoom3" class="w3-container city" style="display:none">
+    <h2>Aritmatika</h2>
+    
+    <p style="text-align: justify;">Banyak skrip melakukan perhitungan aritmatika. Gambar 6.11 merangkum <strong>operator aritmatika.</strong>
+      Perhatikan penggunaan berbagai simbol khusus yang tidak digunakan dalam aljabar. NS<strong>tanda
+      bintang (*)</strong> menunjukkan perkalian; NS<strong>tanda persen (%)</strong> adalah <strong>operator sisa,</strong> yang akan dibahas
+      segera. Operator aritmatika pada Gambar 6.11 adalahbiner operator, karena masing-masing
+      beroperasi pada dua operan. Misalnya, ungkapanjumlah + nilai mengandung biner
+      operator + dan dua operan jumlah dan nilai.</p>
+      <img src="img/gambar 6.11.png">
+
+      <p>
+        <i><strong>Operator sisa,</strong>%</i><br>
+        JavaScript menyediakan operator sisanya, %, yang menghasilkan sisa setelah pembagian. Ekspresix % y
+        menghasilkan sisa setelah x dibagi dengan kamu. Dengan demikian,17% 5 hasil 2 (yaitu, 17 dibagi 5
+        adalah 3, dengan sisa 2), dan 7.4% 3.1 hasil 1.2. Dalam bab-bab selanjutnya, kami mempertimbangkan
+        aplikasi dari operator sisa, seperti menentukan apakah satu bilangan adalah abanyak dari yang lain.
+        Tidak ada operator aritmatika untuk eksponensial dalam JavaScript. (Bab 8 menunjukkan bagaimana
+        melakukan eksponensial dalam JavaScript menggunakanmatematika
+        milik objek pow metode.)
+      </p>
+      <p>
+        &nbsp;&nbsp;&nbsp;Ekspresi aritmatika dalam JavaScript harus ditulis dalam bentuk garis lurus untuk
+        memudahkan memasukkan skrip ke dalam komputer. Jadi, ungkapan seperti “A dibagi dengan B
+        ” harus ditulis sebagai a / b, sehingga semua konstanta, variabel, dan operator muncul dalam a
+        garis lurus. Notasi aljabar berikut umumnyabukan diterima oleh komputer:
+        <br><img src="img/gambar 6.11.1.png"><br> 
+        Tanda kurung digunakan untuk kelompok ekspresi dengan cara yang sama seperti dalam
+        ekspresi aljabar. Misalnya, untuk mengalikanA kali kuantitas b + c kami menulis:
+        <br><img src="img/gambar 6.11.2.png">
+
+      </p>
+      <p>
+        <i><strong>Prioritas Operator</i></strong><br>
+        JavaScript menerapkan operator dalam ekspresi aritmatika dalam urutan yang tepat ditentukan
+        oleh berikut: aturan prioritas operator, yang umumnya sama dengan yang diikuti dalam
+        aljabar: <br>
+        1. Operasi perkalian, pembagian dan sisa diterapkan pertama. Jika suatu
+        ekspresi berisi beberapa operasi perkalian, pembagian, dan sisa, operator
+        diterapkan dari &nbsp;&nbsp;&nbsp;&nbsp;kiri ke kanan. Operasi perkalian, pembagian, dan sisa
+        dikatakan memilikitingkat prioritas yang sama. <br>
+        2. Operasi penjumlahan dan pengurangan diterapkan selanjutnya. Jika ekspresi berisi beberapa
+        operasi penambahan dan pengurangan, operator diterapkan darikiri &nbsp;&nbsp;&nbsp;&nbsp;ke kanan. Operasi
+        penjumlahan dan pengurangan memilikitingkat prioritas yang sama.
+      </p>
+      <p>
+        Aturan prioritas operator memungkinkan JavaScript untuk menerapkan operator dalam urutan yang
+        benar. Ketika kita mengatakan bahwa operator diterapkan darikiri ke kanan, kita mengacu pada
+        <strong>asosiatif</strong> dari operator— memesan di mana operator dengan prioritas yang sama dievaluasi. Kita
+        akan melihat bahwa beberapa operator mengasosiasikan darikanan ke kiri. Gambar 6.12 merangkum
+        aturan prioritas operator. Tabel pada Gambar 6.12 akan diperluas saat operator JavaScript tambahan
+        diperkenalkan. Bagan prioritas lengkap disertakan dalam Lampiran C.<br>
+        <img src="img/gambar 6.12.png"> <br>
+        &nbsp;&nbsp;&nbsp;Mari kita pertimbangkan beberapa ekspresi aljabar. Setiap contoh mencantumkan ekspresi
+        aljabar dan ekspresi JavaScript yang setara.
+      </p>
+      <p>
+        Berikut ini adalah contoh mean aritmatika (rata-rata) dari lima suku:<br>
+        <img src="img/gambar 6.12.1.png"><br>
+        Tanda kurung diperlukan untuk mengelompokkan operator penjumlahan, karena pembagian memiliki
+        prioritas yang lebih tinggi daripada penjumlahan. NSseluruh kuantitas ( a + b + c + d + e ) harus dibagi dengan 5.
+        Jika tanda kurung dihilangkan secara keliru, kita peroleha + b + c + d + e / 5, yang dievaluasi sebagai
+        <br><img src="img/gambar 6.12.2.png"><br>
+        dan tidak akan mengarah pada jawaban yang benar<br>
+        Berikut ini adalah contoh persamaan garis lurus:
+        <br><img src="img/gambar 6.12.3.png"><br>
+        Tidak ada tanda kurung yang diperlukan. Operator perkalian diterapkan terlebih dahulu, karena
+        perkalian lebih diutamakan daripada penjumlahan. Penugasan terjadi terakhir, karena memiliki
+        prioritas lebih rendah daripada perkalian dan penambahan.
+
+      </p>
+      <p>
+        &nbsp;&nbsp;&nbsp;Seperti dalam aljabar, itu dapat diterima untuk digunakan tanda kurung yang tidak perlu dalam
+        ekspresi untuk membuat ekspresi lebih jelas. Ini juga disebut <strong>tanda kurung yang berlebihan.</strong> Misalnya,
+        polinomial derajat kedua sebelumnya mungkin dikurung sebagai berikut:<br>
+        <img src="img/gambar 6.12.4.png">
+      </p>
+
+  </div>
+
+  <div id="Zoom4" class="w3-container city" style="display:none">
+    <h2>Pengambilan Keputusan: Operator Kesetaraan dan Relasional</h2>
+    
+    <p style="text-align: justify;">Bagian ini memperkenalkan versi JavaScript jika penyataan yang memungkinkan skrip untuk
+      membuat keputusan berdasarkan kebenaran atau kepalsuan a kondisi. Jika kondisi terpenuhi (yaitu,
+      kondisinya adalahbenar), pernyataan di badan jika pernyataan dijalankan. Jika kondisinyabukan
+      terpenuhi (yaitu, kondisinya adalah Salah), pernyataan di badan jika pernyataan adalah bukan
+      dieksekusi. Kita akan melihat contohnya segera.</p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Kondisi di jika pernyataan dapat dibentuk dengan menggunakan operator kesetaraan dan
+      operator relasional diringkas dalam Gambar 6.13. Operator relasional semuanya memiliki
+      sama tingkat prioritas dan asosiasi dari kiri ke kanan. Operator kesetaraan keduanya memiliki
+      tingkat prioritas yang sama, yaitu lebih rendah dari prioritas operator relasional. Operator
+      kesetaraan juga mengasosiasikan dari kiri ke kanan. Setiap perbandingan menghasilkan nilai
+      benar atau Salah.
+
+      <img src="img/gambar 6.13.png">
+    </p>
+    <p>
+      &nbsp;&nbsp;&nbsp;Script pada Gambar 6.14 menggunakan empat jika pernyataan untuk menampilkan salam sensitif waktu
+      di halaman selamat datang. Script memperoleh waktu lokal dari komputer pengguna dan mengubahnya dari
+      format jam 24 jam (0–23) ke format jam 12 jam (0-11). Dengan menggunakan nilai ini, skrip menampilkan
+      salam yang sesuai untuk waktu saat ini. Script dan contoh output ditunjukkan pada Gambar 6.14. Baris 11–13
+      mendeklarasikan variabel yang digunakan dalam skrip. Perhatikan juga bahwa JavaScript memungkinkan
+      Anda untuk menetapkan nilai ke variabel saat dideklarasikan.
+    </p>
+    <p>
+      <i><strong>Membuat dan Menggunakan Yang Baru</strong> Tanggal <strong> Obyek</strong></i><br>
+      Baris 12 mengatur variabel sekarang ke yang baru Tanggal <strong>obyek,</strong> yang berisi informasi tentang waktu setempat
+      saat ini. Di Bagian 6.2, kami memperkenalkandokumen objek, yang merangkum data yang berkaitan dengan
+      halaman web saat ini. Di sini, kami menggunakan bawaan JavaScriptTanggal objek untuk memperoleh waktu
+      lokal saat ini. Kami membuat objek baru dengan menggunakanbaru operator diikuti oleh jenis objek, dalam
+      hal ini Tanggal, dan sepasang tanda kurung. Beberapa objek mengharuskan argumen ditempatkan dalam
+      tanda kurung untuk menentukan detail tentang objek yang akan dibuat. Di dalam <br>
+      <img src="img/gambar 6.14.1.png"><br>
+      <img src="img/gambar 6.14.2.png">
+    </p>
+    <p>
+      kasus ini, kami membiarkan tanda kurung kosong untuk membuat bawaan Tanggal objek yang berisi informasi
+      tentang tanggal dan waktu saat ini. Setelah baris 12 dijalankan, variabelsekarang mengacu pada yang baru
+      Tanggal obyek. Kami tidak perlu menggunakanbaru operator ketika kami menggunakan dokumen
+      dan jendela objek karena objek ini selalu dibuat oleh browser. Baris 13 mengatur variabel
+      jam ke bilangan bulat yang sama dengan jam saat ini (dalam format jam 24 jam) yang dikembalikan oleh Tanggal
+      milik objek dapatkanJam metode. Bab 11 menyajikan diskusi yang lebih rinci tentangTanggal atribut dan
+      metode objek, dan objek secara umum. Skrip menggunakanwindow.prompt untuk mengizinkan
+      pengguna memasukkan nama untuk ditampilkan sebagai bagian dari salam (baris 16)
+    </p>
+    <p>
+      <i><strong>Pengambilan Keputusan dengan</strong> jika <strong>Penyataan</strong></i><br>
+      Untuk menampilkan sapaan peka waktu yang benar, skrip harus menentukan apakah pengguna
+      mengunjungi halaman pada pagi, siang, atau malam hari. Pertamajika pernyataan (baris
+      19–20) membandingkan nilai variabel jam dengan 12. Jikajam kurang dari 12, lalu pengguna
+      mengunjungi halaman pada pagi hari, dan pernyataan pada baris 20 menampilkan string
+      "Selamat pagi". Jika kondisi ini tidak terpenuhi, baris 20 tidak dijalankan. Baris 23 menentukan
+      apakahjam lebih besar atau sama dengan 12. Jikajam lebih besar atau sama dengan 12, lalu
+      pengguna mengunjungi halaman tersebut pada sore atau malam hari. Baris 24-35 dijalankan
+      untuk menentukan sapaan yang sesuai. Jikajam kurang dari 12, maka penerjemah JavaScript
+      tidak mengeksekusi baris ini dan melanjutkan ke baris 37.
+    </p>
+    <p>
+      <i><strong>Blok dan Pengambilan Keputusan dengan Nested</strong> jika <strong>Pernyataan</strong></i><br>
+      Penjepit { di baris 24 dimulai a <strong>memblokir</strong> pernyataan (baris 24-35) yang dieksekusi
+      bersama-sama jika jam lebih besar atau sama dengan 12. Pengurangan baris 2612 dari jam,
+      mengonversi jam saat ini dari format jam 24 jam (0–23) ke format jam 12 jam (0–11). NSjika
+      pernyataan (baris 29) menentukan apakah jam sekarang kurang dari 6. Jika ya, maka
+      waktunya antara tengah hari dan 6 sore, dan baris 30 menampilkan awal dari HTML5h1
+      elemen ("Selamat Siang, "). Jikajam lebih besar atau sama dengan 6, waktunya antara jam 6
+      sore dan tengah malam, dan skrip menampilkan salam "Selamat malam" (baris 33–34).
+      Penjepit} pada baris 35 mengakhiri blok pernyataan yang terkait dengan jika pernyataan
+      pada baris 23. Perhatikan bahwa jika pernyataan dapat <strong>bersarang-</strong>satu jika pernyataan
+      dapat ditempatkan dalam lain. NSjika pernyataan yang menentukan apakah pengguna
+      mengunjungi halaman pada sore atau malam hari (baris 29–30 dan baris 33–34)
+      dijalankan hanya jika skrip telah menetapkannya jam lebih besar atau sama dengan 12 (
+      baris 23). Jika skrip telah menentukan waktu saat ini menjadi pagi, perbandingan
+      tambahan ini tidak dilakukan. Bab 7 membahas blok dan bersarangjika pernyataan.
+      Akhirnya, baris 37–38 menampilkan sisa HTML5h1 elemen (bagian yang tersisa dari
+      salam), yang tidak tergantung pada waktu hari.
+    </p>
+    <p>
+      <i><strong>Pernyataan Kosong</i></strong><br>
+      Perhatikan bahwa ada tidak titik koma (;) di akhir baris pertama masing-masing jika penyataan. Menyertakan
+      titik koma seperti itu akan menghasilkankesalahan logika pada waktu eksekusi. Sebagai contoh,<br>
+      <img src="img/gambar 6.14.3.png"><br>
+      sebenarnya akan ditafsirkan oleh JavaScript secara keliru sebagai<br>
+      <img src="img/gambar 6.14.4.png"><br>
+      di mana titik koma pada garis itu sendiri—disebut <strong>pernyataan kosong—</strong>adalah pernyataan yang
+      akan dieksekusi jika kondisi dalam jika pernyataan itu benar. Ketika pernyataan kosong dijalankan,
+      tidak ada tugas yang dilakukan dalam skrip. Script kemudian melanjutkan dengan pernyataan
+      berikutnya, yang dijalankan terlepas dari apakah kondisinya benar atau salah. Dalam contoh ini,
+      "Selamat Pagi," akan dicetak tanpa memedulikan dari waktu hari.
+    </p>
+    <p>
+      <i><strong>Memvalidasi Script Contoh Ini</strong></i><br>
+      Saat Anda memvalidasi contoh ini dengan www.javascriptlint.com, pesan peringatan berikut
+      ditampilkan untuk jika pernyataan pada baris 19, 29 dan 33:
+      <img src="img/gambar 6.14.5.png"><br>
+      Anda melihat itu dan jika badan pernyataan dapat berisi beberapa pernyataan dalam satu blok yang dibatasi
+      oleh kurung kurawal (baris 23–35). Tanda kurung kurawal tidak diperlukan untukjika pernyataan yang
+      memiliki badan satu pernyataan, seperti yang ada di baris 19, 29 dan 33. Banyak programmer menganggap
+      praktik yang baik untuk menyertakan setiap jika isi pernyataan dalam kurung kurawal—sebenarnya, banyak
+      organisasi memerlukan ini. Untuk alasan ini, validator mengeluarkan pesan peringatan sebelumnya. Anda
+      dapat menghilangkan pesan peringatan contoh ini dengan melampirkanjika badan pernyataan dalam kurung
+      kurawal. Misalnya,jika pada baris 19–20 dapat ditulis sebagai:
+      <img src="img/gambar 6.14.6.png"><br>
+    </p>
+    <p>
+      <i><strong>Persamaan yang Ketat (</strong>===<strong>) dan Ketat Tidak Sama dengan (</strong>!==<strong>)Operator</strong></i><br>
+      Seperti yang kami sebutkan di Bagian 6.5, JavaScript dapat mengonversi antar tipe untuk Anda.
+      Ini termasuk kasus di mana Anda membandingkan nilai. Misalnya perbandingan"75" == 75
+      menghasilkan nilai benar karena JavaScript mengonversi string "75" ke nomor 75 sebelum melakukan
+      pemerataan (==) perbandingan. Untuk mencegah konversi implisit dalam perbandingan, yang dapat
+      menyebabkan hasil yang tidak diharapkan, JavaScript menyediakan <strong>persamaan yang ketat</strong> (===) <strong>dan
+      ketat tidak sama</strong> (!==) operator. Perbandingan"75" === 75 menghasilkan nilai Salah karena satu operan
+      adalah string dan yang lainnya adalah angka. Demikian pula,75" !== 75 hasil benar
+      karena jenis operan tidak sama, oleh karena itu nilainya tidak sama. Jika Anda tidak
+      menggunakan operator ini saat membandingkan nilai denganbatal, 0, benar, Salah atau
+      string kosong (""), javascriptlint.comValidator JavaScript menampilkan peringatan potensi
+      konversi implisit.
+    </p>
+    <p>
+      <i><strong>Bagan Prioritas Operator</strong></i><br>
+      Bagan pada Gambar 6.15 menunjukkan prioritas operator yang diperkenalkan dalam bab ini.
+      Operator ditampilkan dari atas ke bawah dalam urutan prioritas yang menurun. Perhatikan
+      bahwa semua operator ini, kecuali operator penugasan,=, asosiasikan dari kiri ke kanan.
+      Penambahan dibiarkan asosiatif, jadi ekspresi sepertix + y + z dievaluasi seolah-olah telah
+      telah ditulis sebagai (x + y) + z. Operator penugasan,=, asosiasi dari kanan ke kiri, jadi ekspresi
+      seperti x = y = 0 dievaluasi seolah-olah telah ditulis sebagai x = (y = 0), yang pertama menetapkan
+      nilai 0 ke variabel kamu, kemudian menetapkan hasil dari tugas itu, 0, ke x.<br>
+      <img src="img/gambar 6.15.png">
+    </p>
+  </div>
+
+  <div id="Zoom5" class="w3-container city" style="display:none">
+    <h2>Sumber Daya Web</h2>
+    
+    <p style="text-align: justify;">
+      www.deitel.com/javascript</p>
+      <p>
+      Pusat Sumber Daya JavaScript Deitel berisi tautan ke beberapa sumber JavaScript terbaik di web. Di sana Anda akan
+      menemukan tautan yang dikategorikan ke alat JavaScript, pembuat kode, forum, buku, perpustakaan, kerangka kerja,
+      dan banyak lagi. Lihat juga tutorial untuk semua tingkat keahlian, dari pengantar hingga mahir.
+    </p>
+    </div>
+
+    <div id="Zoom6" class="w3-container city" style="display:none">
+      <h2>Rangkuman Materi JavaScript</h2>
+      
+      <p style="text-align: justify;">
+      <i><strong>Bagian 1 Pendahuluan</strong></i>
+      <br>• JavaScript digunakan untuk meningkatkan fungsionalitas dan tampilan halaman web.
+      </p>
+
+        <i><strong>Bagian 2 Script Pertama Anda: Menampilkan Baris Teks dengan JavaScript di Halaman Web</strong></i>
+        <br>• Seringkali, JavaScript muncul di bagian dari dokumen HTML5.
+        <br>• Browser menafsirkan isi dari bagian pertama.
+        <br>• NS tag menunjukkan kepada browser bahwa teks yang mengikuti adalah bagian dari skrip (hal.
+              186). AtributTipe (P. 187) menentukan tipe MIME dari bahasa &nbsp;&nbsp;&nbsp;scripting yang digunakan dalam skrip—
+              seperti teks/javascript.
+        <br>• Serangkaian karakter dapat ditampung di antara double (") tanda kutip.
+        <br>• Sebuah string kadang-kadang disebut string karakter, pesan atau string literal.
+        <br>• Peramban dokumen objek (hal. 188) mewakili dokumen HTML5 yang sedang ditampilkan browser. NSdokumen
+        objek memungkinkan Anda untuk menentukan teks &nbsp;&nbsp;HTML5 untuk ditampilkan dalam dokumen.
+        <br>• Browser membuat satu set objek lengkap yang memungkinkan Anda mengakses dan memanipulasi setiap
+        elemen dokumen HTML5.
+        <br>• Sebuah objek (hlm. 188) berada di memori komputer dan berisi informasi yang digunakan oleh
+        skrip. Istilah objek biasanya menyiratkan bahwa atribut (data) (hal. &nbsp;&nbsp;&nbsp;188) dan perilaku (metode) (hal.
+        188) terkait dengan objek. Metode objek menggunakan data atribut untuk melakukan tindakan
+        yang berguna bagi klien objek &nbsp;&nbsp;&nbsp;(yaitu, skrip yang memanggil metode).
+        <br>• NS dokumen milik objek tulis method menulis sebaris teks HTML5 dalam dokumen.
+        <br>• Setiap pernyataan diakhiri dengan titik koma (juga dikenal sebagai terminator pernyataan),
+        meskipun praktik ini tidak diperlukan oleh JavaScript.
+        <br>• JavaScript peka huruf besar/kecil. Tidak menggunakan huruf besar dan huruf kecil yang tepat adalah kesalahan sintaksis.
+
+      <p>  
+      <i><strong>Bagian 3 Memodifikasi Skrip Pertama Anda</strong></i>
+      <br>• Terkadang berguna untuk menampilkan informasi di jendela yang disebut dialog (atau kotak dialog) yang
+      "muncul" di layar untuk menarik perhatian pengguna. &nbsp;&nbsp;&nbsp;Dialog biasanya menampilkan pesan penting kepada
+      pengguna yang menjelajahi halaman web.
+      <br>• Peramban jendela objek menggunakan metode peringatan untuk menampilkan dialog peringatan.
+      <br>• Urutan pelarian \n adalah karakter baris baru (hal. 192). Ini menyebabkan kursor dalam
+      dokumen HTML5 bergerak ke awal baris berikutnya.
+      </p>
+
+      <i><strong>Bagian 4 Memperoleh Masukan Pengguna dengan</strong> mengingatkan <strong>Dialog</strong></i>
+      <br>• Kata kunci adalah kata-kata dengan arti khusus dalam JavaScript.
+      <br>• Kata kunci var di awal pernyataan menunjukkan bahwa kata nama adalah variabel. Variabel
+      adalah lokasi di memori komputer di mana nilai dapat disimpan untuk &nbsp;&nbsp;&nbsp;digunakan oleh
+      skrip. Semua variabel memiliki nama dan nilai, dan harus dideklarasikan dengan pernyataan var
+      sebelum digunakan dalam skrip.
+      <br>• Nama variabel dapat berupa pengenal valid apa pun yang terdiri dari huruf, angka, garis bawah ( _ ) dan tanda dolar
+      ($) yang tidak dimulai dengan angka dan &nbsp;&nbsp;&nbsp;bukan merupakan kata kunci JavaScript yang dicadangkan.
+      <br>• Deklarasi diakhiri dengan titik koma dan dapat dibagi menjadi beberapa baris dengan setiap variabel dalam
+      deklarasi dipisahkan dengan koma—dikenal sebagai &nbsp;&nbsp;&nbsp;daftar nama variabel yang dipisahkan koma. Beberapa
+      variabel dapat dideklarasikan dalam satu deklarasi atau dalam beberapa deklarasi.
+      <br>• Sangat membantu untuk menunjukkan tujuan variabel dalam skrip dengan menempatkan komentar
+      JavaScript di akhir deklarasi variabel. Komentar satu baris &nbsp;&nbsp;&nbsp;dimulai dengan karakter
+      // dan berakhir di akhir baris. Komentar tidak menyebabkan browser melakukan tindakan
+      apa pun saat skrip ditafsirkan; sebaliknya, &nbsp;&nbsp;&nbsp;komentar diabaikan oleh juru bahasa JavaScript.
+      <br>• Komentar multibaris dimulai dengan pembatas /* dan diakhiri dengan pembatas */. Semua teks di
+      antara pembatas komentar diabaikan oleh penerjemah.
+      <br>• NS jendela milik objek mengingatkan metode menampilkan dialog di mana pengguna dapat mengetikkan nilai. Argumen
+      pertama adalah pesan (disebut prompt) &nbsp;&nbsp;&nbsp;yang mengarahkan pengguna untuk mengambil tindakan tertentu.
+      Argumen opsional kedua, dipisahkan dari yang pertama dengan koma, dapat menentukan &nbsp;&nbsp;&nbsp;string default yang
+      akan ditampilkan di bidang teks.
+      <br>• Variabel diberi nilai dengan penugasan, menggunakan operator penugasan, =. NS
+      = operator disebut operator biner, karena memiliki dua operan (hal. 196).
+      <br>• JavaScript memiliki versi + operator untuk penggabungan string yang memungkinkan
+      string dan nilai tipe data lain (termasuk string lain) untuk digabungkan.
+
+    <p>
+      <i><strong>Bagian 5 Konsep Memori</strong></i>
+      <br>• Setiap variabel memiliki nama, tipe dan nilai.
+      <br>• Saat sebuah nilai ditempatkan di lokasi memori, nilai tersebut menggantikan nilai sebelumnya di lokasi
+      tersebut. Ketika sebuah nilai dibacakan dari lokasi memori, &nbsp;&nbsp;&nbsp;prosesnya tidak merusak.
+      <br>• JavaScript tidak memerlukan variabel untuk memiliki tipe yang dideklarasikan sebelum dapat digunakan dalam
+      skrip. Variabel dalam JavaScript dapat berisi nilai &nbsp;&nbsp;&nbsp;dari tipe data apa pun, dan dalam banyak situasi, JavaScript
+      secara otomatis mengonversi antara nilai dari tipe yang berbeda untuk Anda. Untuk alasan ini, &nbsp;&nbsp;&nbsp;JavaScript disebut
+      sebagai bahasa yang diketik secara longgar.
+      <br>• Ketika sebuah variabel dideklarasikan dalam JavaScript, tetapi tidak diberi nilai, variabel tersebut memiliki nilai yang tidak ditentukan. 
+      Mencoba menggunakan nilai &nbsp;&nbsp;&nbsp;variabel seperti itu biasanya merupakan kesalahan logika.
+      <br>• Ketika variabel dideklarasikan, mereka tidak diberi nilai default, kecuali jika Anda menentukannya. Untuk
+      menunjukkan bahwa variabel tidak mengandung nilai, &nbsp;&nbsp;&nbsp;Anda dapat menetapkan nilaibatal untuk itu.
+    </p>
+
+    <p>
+      <i><strong>Bagian 6 Aritmatika</strong></i>
+      <br>• Operator aritmatika dasar (+, -, *, /, dan %; P. 200) adalah operator biner, karena masing-masing beroperasi
+      pada dua operan.
+      <br>• Tanda kurung dapat digunakan untuk mengelompokkan ekspresi dengan cara yang sama seperti dalam ekspresi aljabar.
+      <br>• JavaScript menerapkan operator dalam ekspresi aritmatika dalam urutan tepat yang ditentukan
+      oleh aturan prioritas operator berikut.
+      <br>• Ketika kita mengatakan bahwa operator diterapkan dari kiri ke kanan, kita mengacu pada asosiatifitas operator. 
+      Beberapa operator mengasosiasikan dari kanan ke &nbsp;&nbsp;&nbsp;kiri.
+    </p>
+
+    <p>
+      <i><strong>Bagian 7 Pengambilan Keputusan: Operator Kesetaraan dan Relasional</strong></i>
+      <br>• JavaScript jika pernyataan  memungkinkan skrip untuk membuat keputusan berdasarkan
+      benar atau salahnya suatu kondisi. Jika kondisi terpenuhi,
+      pernyataan &nbsp;&nbsp;&nbsp;dalam tubuh jika pernyataan dijalankan. Jika kondisi tidak terpenuhi (yaitu, kondisi
+      salah), pernyataan di tubuhjika pernyataan tidak dieksekusi
+      <br>• Kondisi di jika pernyataan dapat dibentuk dengan menggunakan operator kesetaraan dan operator
+      relasional.
+    </p>
+      </div>
+
+</body>
+</html>
